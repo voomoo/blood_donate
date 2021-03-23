@@ -1,0 +1,1051 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --primary: #fff;
+  --accent: #c70100;
+  --secondary: #f6f7f9;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+/**************************/
+/* welcome page animation */
+/**************************/
+@keyframes blood-breath {
+  0% {
+    fill: var(--accent);
+  }
+  50% {
+    fill: lightcoral;
+  }
+  100% {
+    fill: var(--accent);
+  }
+}
+/******************************/
+/* welcome page animation end */
+/******************************/
+
+/******************************/
+/* welcome page styling start */
+/******************************/
+.welcome-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blood-drop {
+  animation-name: blood-breath;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.welcome-page span {
+  color: var(--accent);
+}
+
+.welcome-page svg {
+  height: 150px;
+  width: 150px;
+}
+
+.welcome-page h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+.welcome-page button {
+  width: 250px;
+  height: 60px;
+  background-color: var(--accent);
+  color: var(--primary);
+  border-radius: 35px;
+  border: none;
+  font-size: 1.5rem;
+  margin-top: 100px;
+  cursor: pointer;
+  outline: none;
+}
+
+.welcome-page button:active {
+  background: #a80202;
+}
+
+/******************************/
+/** welcome page styling end **/
+/******************************/
+
+/******************************/
+/* sign in page styling start */
+/******************************/
+
+.signin {
+  display: flex;
+  height: 100vh;
+  padding: 30px;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left img {
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.left h1 {
+  font-size: 2.2rem;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.right h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.right form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right label {
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.right input {
+  height: 50px;
+  width: 350px;
+  background: #edf0f5;
+  border-radius: 30px;
+  outline: none;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  box-shadow: 0px 2px 5px #ccc;
+}
+
+.right input[type="submit"] {
+  background: var(--accent);
+  padding: 0px;
+  color: var(--primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.right p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.other-options {
+  width: 100%;
+  text-align: center;
+}
+
+.password-view {
+  width: 40px;
+  position: relative;
+  bottom: 60px;
+  left: 300px;
+}
+
+@media screen and (max-width: 1024px) {
+  .signin {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left,
+  .right,
+  .right form {
+    width: 100%;
+  }
+}
+
+/******************************/
+/** sign in page styling end **/
+/******************************/
+
+/******************************/
+/* sign up page styling start */
+/******************************/
+
+.signup,
+.signup-contact,
+.signup-blood-group,
+.signup-weight,
+.signup-age,
+.signup-image-upload {
+  height: 100vh;
+  display: flex;
+}
+
+.signup > .left > h2 {
+  font-weight: 300;
+  color: #565656;
+  text-align: center;
+  padding: 15px 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup,
+  .signup-contact,
+  .signup-blood-group,
+  .signup-weight,
+  .signup-age,
+  .signup-image-upload {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .signup > .left > h2 {
+    padding: 10px 10px;
+  }
+
+  .signup > .right > form {
+    align-items: center;
+  }
+
+  .signup label {
+    align-self: flex-start !important;
+    margin-left: 40px;
+  }
+
+  .signup .password-view {
+    left: 40%;
+  }
+}
+
+/******************************/
+/** sign up page styling end **/
+/******************************/
+
+/****************************************/
+/** sign up contact page styling start **/
+/****************************************/
+.signup-contact > .left > h2 {
+  font-weight: 300;
+  color: #565656;
+  text-align: center;
+  padding: 15px 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup-contact > .left > h2 {
+    padding: 10px 10px;
+  }
+
+  .signup-contact > .right > form {
+    align-items: center;
+  }
+
+  .signup-contact label {
+    align-self: flex-start !important;
+    margin-left: 40px;
+  }
+}
+
+/**************************************/
+/** sign up contact page styling end **/
+/**************************************/
+
+/********************************************/
+/** sign up blood group page styling start **/
+/********************************************/
+.signup-blood-group > .left > h2 {
+  font-weight: 300;
+  color: #565656;
+  text-align: center;
+  padding: 15px 100px;
+}
+
+.blood-groups {
+  display: flex;
+  margin: 20px 0px;
+}
+
+.signup-blood-group .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.blood-groups p {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.group-active {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .signup-blood-group > .left > h2 {
+    padding: 10px 10px;
+  }
+}
+
+/******************************************/
+/** sign up blood group page styling end **/
+/******************************************/
+
+/***************************************/
+/** sign up weight page styling start **/
+/***************************************/
+
+.signup-weight > .left > h2 {
+  font-weight: 300;
+  color: #565656;
+  text-align: center;
+  padding: 15px 100px;
+}
+
+.signup-weight > .right {
+  flex-direction: column;
+}
+
+.signup-weight > .right > div {
+  margin: 30px 0px;
+}
+
+.signup-weight > .right img {
+  margin: 10px;
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup-weight > .left > h2 {
+    padding: 10px 10px;
+  }
+}
+/*************************************/
+/** sign up weight page styling end **/
+/*************************************/
+
+/************************************/
+/** sign up age page styling start **/
+/************************************/
+
+.signup-age {
+  display: flex;
+}
+
+.signup-age > .left > h2 {
+  font-weight: 300;
+  color: #565656;
+  text-align: center;
+  padding: 15px 100px;
+}
+
+.signup-age > .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-age > .right > div {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.point {
+  background-color: var(--accent) !important;
+}
+
+.point::after {
+  border-color: var(--accent) transparent transparent transparent !important;
+}
+
+.ruler-line {
+  background-color: var(--accent) !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup-age > .left > h2 {
+    padding: 10px 10px;
+  }
+}
+
+/**********************************/
+/** sign up age page styling end **/
+/**********************************/
+
+/*********************************************/
+/** sign up image upload page styling start **/
+/*********************************************/
+
+.signup-image-upload > .left > h2 {
+  font-weight: 300;
+  color: #565656;
+  text-align: center;
+  padding: 15px 100px;
+}
+
+.signup-image-upload > .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.signup-image-upload input[type="file"] {
+  display: none;
+}
+
+.signup-image-upload > .right > div {
+  height: 150px;
+  width: 150px;
+  background: url("./assets//file_upload.png");
+  background-color: #f9f7f9;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 0px 5px 5px #c9c9c9;
+  margin: 20px 0px 30px 0px;
+}
+
+.signup-image-upload label {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup-image-upload > .left > h2 {
+    padding: 10px 10px;
+  }
+}
+
+/*******************************************/
+/** sign up image upload page styling end **/
+/*******************************************/
+
+/************************/
+/** home styling start **/
+/************************/
+
+.home {
+  height: 100vh;
+  background: #f0f0f0;
+  display: flex;
+}
+
+.home-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .home > .sidebar {
+    display: none;
+  }
+}
+
+/**********************/
+/** home styling end **/
+/**********************/
+
+/***************************/
+/** sidebar styling start **/
+/***************************/
+
+.sidebar {
+  width: 300px !important;
+  height: 100vh;
+  background: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sidebar > img {
+  width: 80%;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.nav-links p {
+  margin-bottom: 15px;
+  display: block;
+  margin-left: 30px;
+  color: black;
+  padding-left: 5px;
+}
+
+.nav-links p:hover {
+  background-color: hsla(0, 100%, 39%, 0.3);
+  border-right: 5px solid var(--accent);
+}
+
+.nav-active {
+  background-color: hsla(0, 100%, 39%, 0.3);
+  border-right: 5px solid var(--accent);
+}
+
+.nav-links {
+  width: 100%;
+}
+
+/*************************/
+/** sidebar styling end **/
+/*************************/
+
+/***************************************/
+/** Logged in user widget style start **/
+/***************************************/
+
+.loggedin-user-widget {
+  display: flex;
+  width: 250px;
+  justify-content: space-around;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.loggedin-user-widget img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+}
+
+/*************************************/
+/** Logged in user widget style end **/
+/*************************************/
+
+/****************************/
+/** campeign styling start **/
+/****************************/
+.campaign {
+  width: 100%;
+  align-self: center;
+}
+
+.banner {
+  width: 30% !important;
+  height: 130px;
+  background: url("./assets/banner.png") rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  border-radius: 12px;
+  margin: 20px 8px;
+  padding: 5px 10px;
+  padding-top: 55px;
+  color: var(--primary);
+  text-align: left;
+  box-shadow: 0px 2px 5px rgb(131, 131, 131);
+}
+
+.banner h5 {
+  color: var(--primary);
+}
+
+.banner > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner {
+    width: 80% !important;
+  }
+}
+
+/****************************/
+/** campeign styling end **/
+/****************************/
+
+/***********************/
+/** map styling start **/
+/***********************/
+
+.gm-control-active {
+  display: none !important;
+}
+
+.gmnoprint > div {
+  display: none !important;
+}
+
+.zoom-slider {
+  height: 150px;
+  background: white;
+  width: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 90%;
+  top: 120px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.ant-slider-track {
+  background-color: var(--accent) !important;
+}
+
+.ant-slider-handle {
+  border: solid 2px var(--accent) !important;
+}
+
+.search {
+  height: "30px";
+  width: "60%";
+  position: "relative";
+  background: "white";
+  z-index: "5";
+  margin-top: "5px";
+  border-radius: "20px";
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  padding-left: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 0px 8px rgb(70, 70, 70);
+}
+
+.search input {
+  width: 80%;
+  outline: none;
+  margin-left: 5px;
+}
+
+.drop-down-group {
+  border-radius: 15px !important;
+  margin-left: 10px;
+  display: flex !important;
+  align-items: center !important;
+  margin-top: 5px;
+  color: var(--accent) !important;
+  font-weight: bold !important;
+  height: 30px !important;
+  box-shadow: 2px 0px 8px rgb(70, 70, 70);
+}
+
+.button-group {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/*********************/
+/** map styling end **/
+/*********************/
+
+.menu-map {
+  width: 100%;
+  display: flex;
+}
+
+.menu-request {
+  width: 35%;
+}
+
+.map {
+  width: 65%;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu > div {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* profile */
+
+.profile {
+  display: flex;
+  background-color: #f0f0f0;
+  height: 100vh;
+  width: 100%;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.profile-info {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px 15px 5px 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 4px rgb(161, 161, 161);
+}
+
+.profile-info > div {
+  margin-bottom: 2px;
+}
+
+.profile-info > img {
+  border-radius: 8px;
+}
+
+.user-blood {
+  position: relative;
+  bottom: 25px;
+  left: 80%;
+  width: 3rem;
+  margin-bottom: -1.5rem;
+  height: 3rem;
+  background: url("./assets/drop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--primary);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badges > div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 60px;
+  padding: 10px;
+  text-align: center;
+}
+
+.badge-item img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ant-progress-bg {
+  background: var(--accent) !important;
+}
+
+.ant-progress-inner {
+  background: #b1b1b1 !important;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.request-tab {
+  width: 100%;
+  background: var(--primary);
+  border-radius: 15px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  height: 55%;
+  box-shadow: 0px 0px 4px rgb(161, 161, 161);
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--accent) !important;
+}
+
+.ant-tabs-ink-bar {
+  background: var(--accent) !important;
+}
+
+.profile-right {
+  width: 70%;
+}
+
+.badges-container {
+  width: 100%;
+  background: var(--primary);
+  border-radius: 15px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  height: 40%;
+  box-shadow: 0px 0px 4px rgb(161, 161, 161);
+}
+
+.badges-container > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* notifications */
+
+.notifications {
+  display: flex;
+}
+
+.notification-right {
+  width: 100%;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+}
+
+.notification-right > div {
+  display: flex;
+}
+
+.current-notifications {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-card {
+  display: flex;
+  width: 90%;
+  background: var(--primary);
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgb(161, 161, 161);
+  padding: 10px 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notification-card h2 {
+  margin-right: 8px;
+  height: 40px;
+  width: 40px;
+  color: var(--accent);
+  font-size: 1rem;
+  background: var(--primary);
+  display: flex;
+  font-weight: bold;
+  box-shadow: 0px 0px 4px rgb(161, 161, 161);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.notification-card p {
+  font-size: 0.6rem;
+  align-self: flex-end;
+}
+
+.notification-card h5 {
+  width: 60%;
+}
+
+.notification-card span {
+  font-weight: bold;
+}
+
+.history-notification {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-map {
+    flex-direction: column;
+  }
+
+  .menu-request {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .home > div {
+    padding: 10px;
+  }
+
+  .profile > .sidebar {
+    display: none;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .profile-info {
+    width: 100%;
+  }
+
+  .profile {
+    height: fit-content;
+  }
+
+  .profile-right {
+    width: 100%;
+    align-self: center;
+  }
+
+  .request-tab {
+    margin: 0px;
+    margin-top: 20px;
+    height: fit-content;
+  }
+
+  .badges-container {
+    margin: 0px;
+    margin-top: 20px;
+    height: fit-content;
+  }
+
+  .notifications > .sidebar {
+    display: none;
+  }
+
+  .current-notifications {
+    width: 100%;
+  }
+
+  .notification-right > .notificaiton-container {
+    flex-direction: column;
+  }
+
+  .menu-icon {
+    display: inline !important;
+  }
+
+  .loggedin-user-widget {
+    display: none;
+  }
+
+  .campaign {
+    margin: 40px;
+  }
+
+  .loggedin-user-widget {
+    display: none !important;
+  }
+
+  .notifications {
+    background-color: #f0f0f0;
+    height: fit-content;
+  }
+  .notification-right {
+    margin-top: 40px;
+  }
+
+  .profile-info {
+    margin-top: 50px;
+  }
+
+  .notification-right > div {
+    flex-direction: column;
+  }
+}
+
+/* mobile sidebar */
+
+.menu-icon {
+  display: none;
+}
+
+.mobile-sidebar {
+  width: 100vw !important;
+  position: absolute;
+  z-index: 10;
+  transform: translateX(-100vw);
+  height: 100vh;
+  background: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all ease-in-out;
+}
+
+.mobile-sidebar > .logo {
+  margin-bottom: 20px;
+}
+.drawer-active {
+  transform: translate(0px) !important;
+}
+
+.mobile-sidebar > img {
+  width: 80%;
+}
+
+.menu-icon {
+  position: absolute;
+  margin: 20px;
+  right: 0px;
+}

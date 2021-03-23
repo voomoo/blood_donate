@@ -4,7 +4,7 @@
 
 A frontend project where users can login, register and search for specific blood groups with location or donate blood to others.
 
-Tried to make the project full responsive. So that it works on all devices regardless their dimension.
+Tried to make the project **_full responsive_**. So that it works on all devices regardless their dimension.
 
 ## Used npm commands
 
